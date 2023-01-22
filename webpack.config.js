@@ -5,7 +5,7 @@ const FixStyleOnlyEntries = require('webpack-fix-style-only-entries');
 
 module.exports = {
   devtool: 'inline-source-map',
-  mode: 'development',
+  mode: 'production',
   entry: {
     main: './src/main.js',
     style: './src/style.scss'
