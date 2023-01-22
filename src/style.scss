@@ -1,5 +1,237 @@
-$sample-color: red;
+@import './SCSS/typography';
+
+$title-color: rgb(171, 242, 247);
+$accent-color: rgb(237, 188, 252);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 70vw;
+  margin: 0 auto;
+  background-color: #222;
+  color: #eee;
+}
+
+.nav {
+  font-family: 'Merienda';
+  font-weight: bold;
+  display: flex;
+  list-style-type: none;
+  padding: 20px;
+  justify-content: space-around;
+  background-color: #222;
+  font-size: 16px;
+
+  &__item {
+    color: #ddd;
+    cursor: pointer;
+    padding: 8px 16px;
+
+    &:hover {
+      color: rgb(255, 255, 142);
+      transform: scale(1.1);
+      text-shadow: 1px 1px 2px #bbb;
+
+    }
+
+    &.active {
+      color: rgb(255, 255, 142);
+      transform: scale(1.1);
+      text-shadow: 1px 1px 2px #bbb;
+      border-bottom: 3px solid rgb(255, 255, 142);
+    }
+  }
+}
 
 .content {
-  color: $sample-color;
+  margin-top: 56px;
+  padding: 0 32px;
+  font-family: 'Merienda';
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.title {
+  color: $title-color;
+  margin: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 4rem;
+
+  &__name {
+    font-family: 'Great_Vibes';
+    font-size: 96px;
+    letter-spacing: 2px;
+  }
+
+  &__tagline {
+    font-family: 'Merienda';
+    font-weight: normal;
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: $accent-color;
+  }
+}
+
+
+.description {
+  margin-top: 56px;
+
+}
+
+.gallery {
+  margin-top: 56px;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    width: 30%;
+    border: 3px solid;
+    border-radius: 8px;
+    flex: 0 1 0;
+  }
+}
+
+.info {
+  margin: 56px auto 0;
+  width: max-content;
+  padding-bottom: 56px;
+
+  & th,
+  & td {
+    padding: 8px 16PX;
+  }
+}
+
+.menu-content {
+  padding: 0 56px;
+}
+
+.menu-title {
+  font-family: 'Great_Vibes';
+  font-size: 64px;
+  text-align: center;
+  color: $title-color;
+  margin: 56px;
+}
+
+.section {
+  background-color: #6D656F;
+  border-radius: 8px;
+  padding: 16px 48px;
+  display: flex;
+  flex-direction: column;
+
+  &-title {
+    font-family: 'Merienda';
+    color: $accent-color;
+    font-size: 40px;
+    padding-left: 96px;
+    margin-top: 96px;
+    margin-bottom: 32px;
+  }
+
+  *:last-child {
+    border: none;
+  }
+}
+
+.food {
+  display: flex;
+  border-bottom: 1px solid;
+  padding: 42px 28px;
+
+  &__img {
+    width: 30%;
+    border-radius: 8px;
+    border: 3px solid;
+    box-shadow: 3px 3px 15px #444;
+  }
+
+  &__info {
+    padding: 12px 32px;
+    font-family: 'Merienda';
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    & .food-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      // margin-bottom: 16px;
+    }
+
+    & .food-description {
+      flex: 1;
+      font-size: 14px;
+      font-weight: normal;
+      color: #ddd;
+    }
+  }
+
+
+
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  min-height: 100vh;
+  gap: 48px;
+  padding: 24px;
+}
+
+.map {
+  border: 3px solid;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.information {
+  padding: 16px;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 16px;
+
+  &__icon {
+    width: 16px;
+    align-self: center;
+  }
+}
+
+form {
+  padding-inline: 16px;
+  font-size: 14px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+input {
+  width: min(300px, 80%);
+  border-radius: 4px;
+}
+
+textarea {
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: $accent-color;
+  margin-top: 4px;
 }
